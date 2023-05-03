@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<title>{{title}}</title>
+		<link rel="stylesheet" href="/static/stylesheets/my-styles.css">
+		<script type="text/javascript" src="/static/javascripts/jquery-3.6.0.min.js"></script>
+</head>
+		<body>
+			<div class="wrapper">
+				<header>
+					<a href="/"><img src="/static/images/atp-logo.png" alt="ATP logo"></a>
+
+					<form name="search" class="sinput" action="#" method="get">
+						<input type="search" name="q" placeholder="Search"><button type="submit">GO</button>
+					</form>
+
+					<span id="social2">
+						Наши социальные сети:
+						<a href="https://vk.com/tennis_aw" class="social-icon vk" target="_blank"></a>
+						<a href="https://www.youtube.com/@ATPTour" class="social-icon youtube" target="_blank"></a>
+					</span>
+
+					<div class="heading">
+						<h1 id="head_name">{{page_name}}</h1>
+					</div>
+				</header>
+				{% if navmenu %}
+					<nav>
+						<ul class="top-menu">
+							{% for item in navmenu %}
+								<li><a href="{{item.addr}}">{{item.name}}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+				{% endif %}
+				<main id="{{page_name}}">
+					{% block content %}
+					<article>
+						<section>
+							<h2>Статистика теннисных матчей за 2022 год</h2>
+						</section>
+					</article>
+					{% endblock %}
+				</main>
+			</div>
+			<footer>
+				<div class="footer">
+					<div id="social">
+						<h3>Наши социальные сети:</h3>
+						<a href="https://vk.com/tennis_aw" class="social-icon vk" target="_blank"></a>
+						<a href="https://www.youtube.com/@ATPTour" class="social-icon youtube" target="_blank"></a>
+					</div>
+					<div id="footer-logo">
+						<img src="/static/images/footer-atp-logo.png" width="70" alt="ATP logo">
+					</div>
+				</div>
+			</footer>
+			<script type="text/javascript" src="/static/javascripts/topmenu.js"></script>
+			<script type="text/javascript" src="/static/javascripts/jqfunc.js"></script>
+		</body>
+</html>

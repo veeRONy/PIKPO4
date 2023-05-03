@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Вероника Иванова">
+		<meta name="description" content="Статистика теннистых матчей за 2022 год">
+		<title>Статистика теннисных матчей</title>
+		<link rel="stylesheet" href="css/my-styles.css">
+		<script type="text/javascript" src="/static/javascripts/jquery-3.6.0.min.js"></script>
+	</head>
+
+	<body>
+		
+		<div class="wrapper">
+
+			<header>
+				
+				<img src="images/atp-logo.png" alt="ATP logo">
+			    
+				
+
+				<form name="search" class="input" action="#" method="get">
+					<input type="text" name="q" placeholder="Поиск"><button type="submit">ОК</button>
+				</form>
+				
+				<span id="social2">
+					Наши социальные сети:
+					<a href="https://vk.com/tennis_aw" class="social-icon vk" target="_blank"></a>
+					<a href="https://www.youtube.com/@ATPTour" class="social-icon youtube" target="_blank"></a>
+				</span>
+
+		        <div class="heading">
+				    <h1>СТАТИСТИКА ТЕННИСНЫХ МАТЧЕЙ</h1>
+		        </div>
+
+			</header>
+
+			<nav>
+				<ul class="top-menu">
+					<li class="active"><a href="#">ГЛАВНАЯ</a></li>
+					<li><a href="#">О НАС</a></li>
+					<li><a href="#">УЧАСТНИКИ</a></li>
+					<li><a href="#">КОНТАКТЫ</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<aside>
+					<h2>Меню</h2>
+					<nav>
+						<ul class="aside-menu">
+							<li class="active">Статистика матчей</li>
+							<li><a href="#">Исходные файлы</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<article>
+					<section>
+						<h2>
+							Статистика теннисных матчей за 2022 год
+						</h2>
+
+
+						<label>Выберите название турнира:</label>
+						<select id="select_tourney_name">
+							<option>Atp Cup</option>
+							<option>Adelaide 1</option>
+							<option>Melbourne</option>
+							<option>Adelaide 2</option>
+							<option>Sydney</option>
+							<option>Australian Open</option>
+							<option>Cordoba</option>
+							<option>Montpellier</option>
+							<option>Pune</option>
+							<option>Buenos Aires</option>
+							<option>Rotterdam</option>
+							<option>Dallas</option>
+							<option>Delray Beach</option>
+							<option>Doha</option>
+							<option>Rio de Janeiro</option>
+							<option>Marseille</option>
+							<option>Acapulco</option>
+							<option>Dubai</option>
+							<option>Santiago</option>
+							<option>Indian Wells Masters</option>
+							<option>Miami Masters</option>
+							<option>Houston</option>
+							<option>Marrakech</option>
+							<option>Monte Carlo Masters</option>
+							<option>Barcelona</option>
+							<option>Belgrade</option>
+							<option>Estoril</option>
+							<option>Munich</option>
+							<option>Madrid Masters</option>
+							<option>Rome Masters</option>
+							<option>Geneva</option>
+							<option>Lyon</option>
+							<option>Roland Garros</option>
+							<option>s Hertogenbosch</option>
+							<option>Stuttgart</option>
+							<option>Halle</option>
+							<option>Queens Club</option>
+							<option>Mallorca</option>
+							<option>Eastbourne</option>
+							<option>Wimbledon</option>
+							<option>Bastad</option>
+							<option>Newport</option>
+							<option>Hamburg</option>
+							<option>Gstaad</option>
+							<option>Atlanta</option>
+							<option>Kitzbuhel</option>
+							<option>Umag</option>
+							<option>Los Cabos</option>
+							<option>Washington</option>
+							<option>Canada Masters</option>
+							<option>Cincinnati Masters</option>
+							<option>Winston-Salem</option>
+							<option>Us Open</option>
+							<option>San Diego</option>
+							<option>Metz</option>
+							<option>Laver Cup</option>
+							<option>Seoul</option>
+							<option>Sofia</option>
+							<option>Tel Aviv</option>
+							<option>Astana</option>
+							<option>Tokyo</option>
+							<option>Florence</option>
+							<option>Gijon</option>
+							<option>Naples</option>
+							<option>Stockholm</option>
+							<option>Antwerp</option>
+							<option>Basel</option>
+							<option>Vienna</option>
+							<option>Paris Masters</option>
+							<option>NextGen Finals</option>
+							<option>Tour Finals</option>
+							<option>Davis Cup Finals RR: ARG vs CRO</option>
+							<option>Davis Cup Finals SF: AUS vs CRO</option>
+							<option>Davis Cup Finals QF: AUS vs NED</option>
+							<option>Davis Cup Finals F: CAN vs AUS</option>
+							<option>Davis Cup Finals QF: CRO vs ESP</option>
+							<option>Davis Cup Finals SF: ITA vs CAN</option>
+							<option>Davis Cup Finals QF: ITA vs USA</option>
+							<option>Davis Cup QLS R1: ARG vs CZE</option>
+							<option>Davis Cup QLS R1: AUS vs HUN</option>
+							<option>Davis Cup QLS R1: AUT vs KOR</option>
+							<option>Davis Cup QLS R1: BEL vs FIN</option>
+							<option>Davis Cup QLS R1: CAN vs NED</option>
+							<option>Davis Cup QLS R1: ESP vs ROU</option>
+							<option>Davis Cup QLS R1: FRA vs ECU</option>
+							<option>Davis Cup QLS R1: GER vs BRA</option>
+							<option>Davis Cup QLS R1: ITA vs SVK</option>
+							<option>Davis Cup QLS R1: KAZ vs NOR</option>
+							<option>Davis Cup QLS R1: SWE vs JPN</option>
+							<option>Davis Cup QLS R1: USA vs COL</option>
+							<option>Davis Cup WG1 R1: AUT vs PAK</option>
+							<option>Davis Cup WG1 R1: BIH vs MEX</option>
+							<option>Davis Cup WG1 R1: BRA vs POR</option>
+							<option>Davis Cup WG1 R1: CHI vs PER</option>
+							<option>Davis Cup WG1 R1: COL vs TUR</option>
+							<option>Davis Cup WG1 R1: CZE vs ISR</option>
+							<option>Davis Cup WG1 R1: ECU vs SUI</option>
+							<option>Davis Cup WG1 R1: FIN vs NZL</option>
+							<option>Davis Cup WG1 R1: HUN vs UKR</option>
+							<option>Davis Cup WG1 R1: IND vs NOR</option>
+							<option>Davis Cup WG1 R1: JPN vs UZB</option>
+							<option>Davis Cup WG1 R1: SVK vs ROU</option>
+							<option>Davis Cup WG1 PO: CHI vs SLO</option>
+							<option>Davis Cup WG1 PO: IND vs DEN</option>
+							<option>Davis Cup WG1 PO: PAK vs LTU</option>
+							<option>Davis Cup WG1 PO: UZB vs TUR</option>
+							<option>Davis Cup WG2 R1: BAR vs IRL</option>
+							<option>Davis Cup WG2 R1: BOL vs THA</option>
+							<option>Davis Cup WG2 R1: DEN vs ESA</option>
+							<option>Davis Cup WG2 R1: DOM vs LAT</option>
+							<option>Davis Cup WG2 R1: LBN vs MON</option>
+							<option>Davis Cup WG2 R1: LTU vs EGY</option>
+							<option>Davis Cup WG2 R1: POL vs INA</option>
+							<option>Davis Cup WG2 R1: RSA vs BUL</option>
+							<option>Davis Cup WG2 R1: SLO vs EST</option>
+							<option>Davis Cup WG2 R1: TPE vs HKG</option>
+							<option>Davis Cup WG2 R1: TUN vs GRE</option>
+							<option>Davis Cup WG2 R1: URU vs CHN</option>
+							<option>Davis Cup WG2 PO: EGY vs CYP</option>
+							<option>Davis Cup WG2 PO: GRE vs JAM</option>
+							<option>Davis Cup WG2 PO: HKG vs BEN</option>
+						</select>
+						<button>Показать</button><br>
+					
+
+					
+						<label>Выберите имя победителя:</label>
+						<select id="select_winner_name">
+							<option>Felix Auger Aliassime</option>
+							<option>Denis Shapovalov</option>
+							<option>Roberto Bautista Agut</option>
+							<option>Pablo Carreno Busta</option>
+							<option>Daniil Medvedev</option>
+							<option>Casper Ruud</option>
+							<option>Filip Krajinovic</option>
+							<option>Cristian Garin</option>
+							<option>Alejandro Tabilo</option>
+							<option>Jannik Sinner</option>
+							<option>Ugo Humbert</option>
+							<option>Roman Safiullin</option>
+							<option>Matteo Berrettini</option>
+							<option>Alex De Minaur</option>
+							<option>Alexander Zverev</option>
+							<option>Daniel Evans</option>
+							<option>Egor Gerasimov</option>
+							<option>Soon Woo Kwon</option>
+							<option>Steve Johnson</option>
+							<option>Rafael Nadal</option>
+							<option>Maxime Cressy</option>
+							<option>Alex Molcan</option>
+							<option>Tallon Griekspoor</option>
+							<option>Thanasi Kokkinakis</option>
+							<option>Aleksandar Vukic</option>
+							<option>Aslan Karatsev</option>
+							<option>Lorenzo Sonego</option>
+							<option>Pedro Martinez</option>
+							<option>Marin Cilic</option>
+							<option>Joao Sousa</option>
+						</select>
+						<button>Показать</button><br>
+					
+				
+
+					
+						<label>Выберите имя проигравшего:</label>
+						<select id="select_loser_name">
+						<option>Felix Auger Aliassime</option>
+						<option>Denis Shapovalov</option>
+						<option>Roberto Bautista Agut</option>
+						<option>Pablo Carreno Busta</option>
+						<option>Daniil Medvedev</option>
+						<option>Casper Ruud</option>
+						<option>Filip Krajinovic</option>
+						<option>Cristian Garin</option>
+						<option>Alejandro Tabilo</option>
+						<option>Jannik Sinner</option>
+						<option>Ugo Humbert</option>
+						<option>Roman Safiullin</option>
+						<option>Matteo Berrettini</option>
+						<option>Alex De Minaur</option>
+						<option>Alexander Zverev</option>
+						<option>Daniel Evans</option>
+						<option>Egor Gerasimov</option>
+						<option>Soon Woo Kwon</option>
+						<option>Steve Johnson</option>
+						<option>Rafael Nadal</option>
+						<option>Maxime Cressy</option>
+						<option>Alex Molcan</option>
+						<option>Tallon Griekspoor</option>
+						<option>Thanasi Kokkinakis</option>
+						<option>Aleksandar Vukic</option>
+						<option>Aslan Karatsev</option>
+						<option>Lorenzo Sonego</option>
+						<option>Pedro Martinez</option>
+						<option>Marin Cilic</option>
+						<option>Joao Sousa</option>
+					</select>
+					<button>Показать</button><br>
+				
+				
+				
+					<label>Выберите страну:</label>
+					<select>
+						<option>Канада</option>
+						<option>Испания</option>
+						<option>Россия</option>
+						<option>Сербия</option>
+						<option>Италия</option>
+						<option>Франция</option>
+						<option>Австралия</option>
+						<option>Германия</option>
+						<option>США</option>
+						<option>Польша</option>
+						<option>Швеция</option>
+						<option>Япония</option>
+						<option>Корея</option>
+						<option>Китай</option>
+						<option>Финляндия</option>
+						<option>Болгария</option>
+						<option>Словакия</option>
+						<option>Аргентина</option>
+						<option>Бразилия</option>
+						<option>Колумбия</option>
+						<option>Казахстан</option>
+						<option>Пакистан</option>
+						<option>Чехия</option>
+						<option>Норвегия</option>
+						<option>Греция</option>
+						<option>Бельгия</option>
+						<option>Словения</option>
+						<option>Португалия</option>
+					</select>
+					<button>Показать</button><br>
+				
+				
+				
+					<button>Сортировать по дате</button><br>
+
+					<button>Добавить новый турнир</button><br>
+
+					<input type="text" placeholder="Название турнира" hidden>
+					<input type="text" placeholder="Дата турнира (YYYYMMDD)" hidden>
+					<input type="text" placeholder="ID турнира" hidden><br>
+					<button hidden>Подтвердить</button>
+
+					<input type="date">
+					<button>Удалить записи с данной датой</button><br>
+
+
+					<table align="center">
+						<thead>
+							<tr>
+								<th>Название турнира</th>
+								<th>Дата</th>
+								<th>Победитель</th>
+								<th>Проигравший</th>
+								<th>Страна победителя</th>
+								<th>Страна проигравшего</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+					
+				</section>
+
+			</article>
+			</main>
+		</div>
+
+		<footer>
+
+			<div class="footer">
+				<div id="social">
+					<h3>Наши социальные сети:</h3>
+					<a href="https://vk.com/tennis_aw" class="social-icon vk" target="_blank"></a>
+					<a href="https://www.youtube.com/@ATPTour" class="social-icon youtube" target="_blank"></a>
+				</div>
+
+				<div id="footer-logo">
+					<img src="images/footer-atp-logo.png" width="70" alt="ATP logo"></a>
+				</div>
+			</div>
+
+		</footer>
+	</body>
+</html>
